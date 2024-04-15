@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="com.example.new_application.retrofit.response.Article" />
+
+        <variable
+            name="article"
+            type="Article" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/list_item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_list"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_list_item"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_list"
+            android:padding="8dp"
+            android:text="@{article.title}" />
+
+
+    </RelativeLayout>
+</layout>
